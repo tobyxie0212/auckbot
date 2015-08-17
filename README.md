@@ -43,13 +43,17 @@ To use this software, follow these steps:<br/>
 2. Download these sources
   - `git clone git@github.com:ct2034/auckbot.git`
   - `git clone git@github.com:ct2034/navigation.git`
+
+3. Build the necessary preparing code
+  - `cd ~/ros/auckbot_ws`
+  - `catkin_make -p auckbot_gazebo_gencpp`  (error: /home/lixie/ros/auckbot_ws/src/auckbot/auckbot_analysis/src/current_msmt.cpp:18:42: fatal error: auckbot_gazebo/MotorCurrents.h: No such file or directory)
   
-3. Build the code
+4. Build the code
   - `cd ~/ros/auckbot_ws`
   - `catkin_make`
   - `source devel/setup.bash`
 
-4. (OPTIONAL) If you want to use rtabmap:
+5. (OPTIONAL) If you want to use rtabmap:
   - Get the code and compile it according to the available [tutorial](https://code.google.com/p/rtabmap/wiki/Installation#ROS_version)
   - Notes:
     - In case you experience an error like <br/>

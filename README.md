@@ -24,6 +24,12 @@ The following packages need to be installed to run and build the code:<br/>
 - `sudo apt-get install libncurses5-dev`<br/>
 - (optional) `sudo apt-get install robomongo`<br/>
 
+# extra requirements
+The following packages MAY need to be installed to run and build the code:<br/>
+- gazebo-ros <br/>
+- cob_phidgets <br/>
+- cmake_modules <br/>
+
 ## Building
 
 To use this software, follow these steps:<br/>

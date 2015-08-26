@@ -5,12 +5,16 @@
     <param name="use_grid_path" value="$(env MB_USE_GRID_PATH)" />
     
     <!-- EDWA -->
-    <param if="$(env MB_BASE_LOCAL_PLANNER_E)" name="base_local_planner" value="edwa_local_planner/EDWAPlannerROS" />
-    <rosparam if="$(env MB_BASE_LOCAL_PLANNER_E)" file="$(find auckbot_navigation)/param/base_local_planner_params_e.yaml" command="load" />
+    <param if="$(env MB_BASE_LOCAL_PLANNER_EDWA)" name="base_local_planner" value="edwa_local_planner/EDWAPlannerROS" />
+    <rosparam if="$(env MB_BASE_LOCAL_PLANNER_EDWA)" file="$(find auckbot_navigation)/param/base_local_planner_params_edwa.yaml" command="load" />
     
+    <!-- EODWA -->
+    <param if="$(env MB_BASE_LOCAL_PLANNER_EODWA)" name="base_local_planner" value="eodwa_local_planner/EODWAPlannerROS" />
+    <rosparam if="$(env MB_BASE_LOCAL_PLANNER_EODWA)" file="$(find auckbot_navigation)/param/base_local_planner_params_eodwa.yaml" command="load" />
+
     <!-- DWA -->
-    <param unless="$(env MB_BASE_LOCAL_PLANNER_E)" name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
-    <rosparam unless="$(env MB_BASE_LOCAL_PLANNER_E)" file="$(find auckbot_navigation)/param/base_local_planner_params.yaml" command="load" />
+    <param if="$(env MB_BASE_LOCAL_PLANNER_DWA)" name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
+    <rosparam if="$(env MB_BASE_LOCAL_PLANNER_DWA)" file="$(find auckbot_navigation)/param/base_local_planner_params_dwa.yaml" command="load" />
     
     <rosparam file="$(find auckbot_navigation)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find auckbot_navigation)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />

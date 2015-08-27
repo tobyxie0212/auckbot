@@ -48,9 +48,11 @@
 
 #include <pcl_conversions/pcl_conversions.h>
 
-#include "auckbot_analysis/ModelTheta.h"
+#include "auckbot_analysis/ModelTheta.h" //for simulation?
 
 namespace eodwa_local_planner {
+
+  //auckbot_analysis
   void callback(const auckbot_analysis::ModelTheta msg);
 
   void callback(const auckbot_analysis::ModelTheta msg)
@@ -83,6 +85,7 @@ namespace eodwa_local_planner {
     occdist_scale_ = config.occdist_scale;
     obstacle_costs_.setScale(resolution * occdist_scale_);
 
+    //energy term
     energy_scale_ = 1; //config.energy_scale;
     energy_costs_.setScale(resolution * energy_scale_);
 

@@ -86,6 +86,6 @@ Start on the control computer after setting up the connection using `ROS_IP` and
 
 After a succesful naviagtion you can check using `robomongo` if the trip was saved to the database.
 
-github username change test
+github username change test(2nd)
 
 

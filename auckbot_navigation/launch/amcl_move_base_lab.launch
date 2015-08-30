@@ -1,5 +1,5 @@
 <launch>
-	<arg name="map_file" default="$(find auckbot_navigation)/maps/lab2.yaml"/>
+	<arg name="map_file" default="$(find auckbot_navigation)/maps/vicon_room_2.yaml"/>
 
 	<!--- Run map_server -->
 	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>

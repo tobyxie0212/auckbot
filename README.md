@@ -26,9 +26,10 @@ The following packages need to be installed to run and build the code:<br/>
 
 # extra requirements
 The following packages MAY need to be installed to run and build the code:<br/>
-- gazebo-ros <br/>
-- cob_phidgets <br/>
-- cmake_modules <br/>
+- cob_driver/cob_phidgets (from tobyxie0212/cob_driver default indigo or hydro branch) <br/>
+- cob_navigation/cob_scan_unifier (from tobyxie0212/cob_navigation default indigo or hydro branch) <br/>
+- navigation (from tobyxie0212/navigation default jade or hydro branch) <br/>
+
 
 ## Building
 

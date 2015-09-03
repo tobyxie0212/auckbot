@@ -60,8 +60,8 @@
 #include <base_local_planner/obstacle_cost_function.h>
 #include <base_local_planner/simple_scored_sampling_planner.h>
 
-//energy_cost_function
-#include <base_local_planner/energy_cost_function.h>
+//eo_energy_cost_function
+#include <base_local_planner/eo_energy_cost_function.h>
 
 #include <nav_msgs/Path.h>
 

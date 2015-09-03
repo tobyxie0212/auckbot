@@ -131,7 +131,7 @@ namespace edwa_local_planner {
   EDWAPlanner::EDWAPlanner(std::string name, base_local_planner::LocalPlannerUtil *planner_util) :
       planner_util_(planner_util),
       obstacle_costs_(planner_util->getCostmap()),
-      energy_costs_(planner_util->getCostmap()),
+      energy_costs_(planner_util->getCostmap()), //energy cost
       path_costs_(planner_util->getCostmap()),
       goal_costs_(planner_util->getCostmap(), 0.0, 0.0, true),
       goal_front_costs_(planner_util->getCostmap(), 0.0, 0.0, true),
@@ -196,6 +196,7 @@ namespace edwa_local_planner {
     critics.push_back(&path_costs_); // prefers trajectories on global path
     critics.push_back(&goal_costs_); // prefers trajectories that go towards (local) goal, based on wave propagation
 
+    //added energy term
     critics.push_back(&energy_costs_); // prefers energy efficient trajectories
 
     // trajectory generators

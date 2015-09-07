@@ -144,7 +144,7 @@ namespace eodwa_local_planner {
       "model_theta", \
       10, \
       callback);
-      // &base_local_planner::EnergyCostFunction::thetaCallback, \
+      // &base_local_planner::EOEnergyCostFunction::thetaCallback, \
       // &energy_costs_);
   
     goal_front_costs_.setStopOnFailure( false );

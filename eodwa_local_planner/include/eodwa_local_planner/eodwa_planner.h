@@ -178,7 +178,7 @@ namespace eodwa_local_planner {
       base_local_planner::MapGridCostFunction goal_costs_;
       base_local_planner::MapGridCostFunction goal_front_costs_;
       base_local_planner::MapGridCostFunction alignment_costs_;
-      base_local_planner::EnergyCostFunction energy_costs_; //energy cost function
+      base_local_planner::EOEnergyCostFunction energy_costs_; //energy cost function
 
       base_local_planner::SimpleScoredSamplingPlanner scored_sampling_planner_;
   };

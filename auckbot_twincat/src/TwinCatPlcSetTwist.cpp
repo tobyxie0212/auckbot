@@ -61,9 +61,9 @@ void cmd_velCallback(const geometry_msgs::Twist &twist)
 	linVelY = linVelY * 1000;
 
 	// Transformation into wheel velocity
-	double R = 100;
-	double l1 = 320;
-	double l2 = 320;
+	double R = 110;
+	double l1 = 325;
+	double l2 = 332.5;
 
 	double velWheel1 = 1/R * (linVelX + linVelY -(l1+l2)*angVelZ);
 	double velWheel2 = 1/R * (linVelX - linVelY +(l1+l2)*angVelZ);

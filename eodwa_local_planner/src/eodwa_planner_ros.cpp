@@ -80,6 +80,10 @@ namespace eodwa_local_planner {
       limits.prune_plan = config.prune_plan;
       limits.trans_stopped_vel = config.trans_stopped_vel;
       limits.rot_stopped_vel = config.rot_stopped_vel;
+			//test
+			limits.latch_xy_goal_tolerance = config.latch_xy_goal_tolerance;
+			limits.energy_scale = config.energy_scale;
+
       planner_util_.reconfigureCB(limits, config.restore_defaults);
 
       // update eodwa specific configuration

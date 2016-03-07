@@ -86,7 +86,7 @@ namespace eodwa_local_planner {
     obstacle_costs_.setScale(resolution * occdist_scale_);
 
     //energy term
-    energy_scale_ = 1; //config.energy_scale;
+    energy_scale_ = config.energy_scale; //config.energy_scale;
     energy_costs_.setScale(resolution * energy_scale_);
 
     stop_time_buffer_ = config.stop_time_buffer;

@@ -29,7 +29,7 @@ EODWAPlannerROS:
 
 # Trajectory Scoring Parameters
   path_distance_bias: 32.0 #64.0
-  goal_distance_bias: 80.0 #24.0
+  goal_distance_bias: 40000.0 #24.0 #80.0
   occdist_scale: 0.01
   forward_point_distance: 0.325
   stop_time_buffer: 0.2
@@ -47,3 +47,6 @@ EODWAPlannerROS:
   scaling_speed: 0.25
   sim_granularity: 0.025
   trans_stopped_vel: 0.1
+
+	latch_xy_goal_tolerance: false
+	energy_scale: 1

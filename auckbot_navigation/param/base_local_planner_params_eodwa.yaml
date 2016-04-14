@@ -47,6 +47,3 @@ EODWAPlannerROS:
   scaling_speed: 0.25
   sim_granularity: 0.025
   trans_stopped_vel: 0.1
-
-	latch_xy_goal_tolerance: false
-	energy_scale: 1
